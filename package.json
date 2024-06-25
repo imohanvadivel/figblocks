@@ -1,0 +1,109 @@
+{
+	"name": "figblocks",
+	"version": "0.0.1",
+	"description": "A UI component library for building Figma plugins with svelte",
+	"author": {
+		"name": "Mohan Vadivel",
+		"url": "https://mohanvadivel.com",
+		"email": "mohan@mohanvadivel.com"
+	},
+	"license": "MIT",
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imohanvadivel/figblocks.git"
+	},
+	"homepage": "https://figblocks.mohanvadivel.com",
+	"bugs": "https://github.com/imohanvadivel/figblocks/issues",
+	"main": "./dist/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./icons": {
+			"types": "./dist/icons/index.d.ts",
+			"default": "./dist/icons/index.js"
+		},
+		"./globalStyles": {
+			"default": "./dist/global.css"
+		},
+		"./figmaTheme": {
+			"default": "./dist/figmaTheme.css"
+		}
+	},
+	"typesVersions": {
+		">4.0": {
+			"index.d.ts": [
+				"./dist/index.d.ts"
+			],
+			"icons": [
+				"./dist/icons/index.d.ts"
+			],
+			"globalStyles": [
+				"./dist/global.css"
+			],
+			"figmaTheme": [
+				"./dist/figmaTheme.css"
+			]
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build && npm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepublishOnly": "npm run package",
+		"test": "npm run test:integration && npm run test:unit",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest"
+	},
+	"peerDependencies": {
+		"svelte": "^4.0.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/package": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/eslint": "^8.56.7",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"globals": "^15.0.0",
+		"prettier": "^3.1.1",
+		"prettier-plugin-svelte": "^3.1.2",
+		"publint": "^0.1.9",
+		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.0",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"typescript-eslint": "^8.0.0-alpha.20",
+		"vite": "^5.0.11",
+		"vitest": "^1.2.0"
+	},
+	"keywords": [
+		"svelte",
+		"figma",
+		"figma component library",
+		"figma svelte",
+		"figma svelte library",
+		"svelte figma library",
+		"sveltekit",
+		"figma design system",
+		"figma library"
+	]
+}

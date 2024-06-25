@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* STATIC COLORS */
+
+	/* Accent */
+	--blue: var(--figma-color-bg);
+	--purple: var(--figma-color-bg-component);
+	--pink: #ff00ff;
+	--green: #1bc47d;
+	--red: var(--figma-color-bg-danger);
+	--yellow: var(--figma-color-bg-warning);
+
+	/* Basic Foreground */
+	--black: #000;
+	--black1: rgba(0, 0, 0, 0.1);
+	--black3: rgba(0, 0, 0, 0.3);
+	--black8: rgba(0, 0, 0, 0.8);
+
+	/* Static */
+	--figma-color-bg-menu: #1e1e1e;
+	--figma-color-text-menu-text: #fff;
+	--figma-color-text-menu-secondary: rgba(255, 255, 255, 0.7);
+	--figma-color-border-menu: #383838;
+	--figma-color-text-highlight: rgba(13, 153, 255, 0.4);
+
+	/* TYPOGRAPHY */
+	/* Pos = positive applications (black on white) */
+	/* Neg = negative applications (white on black) */
+
+	/* Font stact */
+	--font-stack: 'Inter', sans-serif;
+
+	/* Font sizes */
+	--font-size-xsmall: 11px;
+	--font-size-small: 12px;
+	--font-size-large: 13px;
+	--font-size-xlarge: 14px;
+
+	/* Font weights */
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 600;
+
+	/* Lineheight */
+	--font-lineHeight: 16px;
+	--font-lineHeight-large: 24px;
+
+	/* Letterspacing */
+	--font-letter-spacing-pos-xsmall: 0.005em;
+	--font-letter-spacing-neg-xsmall: 0.01em;
+	--font-letter-spacing-pos-small: 0;
+	--font-letter-spacing-neg-small: 0.005em;
+	--font-letter-spacing-pos-large: -0.0025em;
+	--font-letter-spacing-neg-large: 0.0025em;
+	--font-letter-spacing-pos-xlarge: -0.001em;
+	--font-letter-spacing-neg-xlarge: -0.001em;
+
+	/* SPACING */
+	--figma-size-xxxsmall: 4px;
+	--figma-size-xxsmall: 8px;
+	--figma-size-xsmall: 16px;
+	--figma-size-small: 24px;
+	--figma-size-medium: 32px;
+	--figma-size-large: 40px;
+	--figma-size-xlarge: 48px;
+	--figma-size-xxlarge: 64px;
+	--figma-size-huge: 80px;
+
+	/* BORDER RADIUS */
+	--border-radius-small: 2px;
+	--border-radius-med: 5px;
+	--border-radius-large: 6px;
+}
+
+html {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xsmall);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-xsmall);
+}
+
+/* UTILITIES */
+
+/* Type */
+.figma-font-ui11 {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xsmall);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-xsmall);
+	color: var(--figma-color-text);
+}
+.figma-font-ui12 {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-small);
+	color: var(--figma-color-text);
+}
+.figma-font-ui13 {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-large);
+	color: var(--figma-color-text);
+}
+.figma-font-ui14 {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xlarge);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-xlarge);
+}
+
+.figma-font-ui11-medium {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xsmall);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-xsmall);
+	color: var(--figma-color-text);
+}
+.figma-font-ui12-medium {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-small);
+	color: var(--figma-color-text);
+}
+.figma-font-ui13-medium {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-large);
+	color: var(--figma-color-text);
+}
+.figma-font-ui14-medium {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xlarge);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-xlarge);
+	color: var(--figma-color-text);
+}
+
+.figma-font-ui11-bold {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xsmall);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-xsmall);
+	color: var(--figma-color-text);
+}
+.figma-font-ui12-bold {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--font-lineHeight);
+	letter-spacing: var(--font-letter-spacing-pos-small);
+	color: var(--figma-color-text);
+}
+.figma-font-ui13-bold {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-large);
+	color: var(--figma-color-text);
+}
+.figma-font-ui14-bold {
+	font-family: var(--font-stack);
+	font-size: var(--font-size-xlarge);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--font-lineHeight-large);
+	letter-spacing: var(--font-letter-spacing-pos-xlarge);
+	color: var(--figma-color-text);
+}
+
+/* Dark Mode Type */
+
+.figma-dark .figma-font-ui11,
+.figma-dark .figma-font-ui11-medium,
+.figma-dark .figma-font-ui11-bold {
+	letter-spacing: var(--font-letter-spacing-neg-xsmall);
+}
+.figma-dark .figma-font-ui12,
+.figma-dark .figma-font-ui12-medium,
+.figma-dark .figma-font-ui12-bold {
+	letter-spacing: var(--font-letter-spacing-neg-small);
+}
+.figma-dark .figma-font-ui13,
+.figma-dark .figma-font-ui13-medium,
+.figma-dark .figma-font-ui13-bold {
+	letter-spacing: var(--font-letter-spacing-neg-large);
+}
+.figma-dark .figma-font-ui14,
+.figma-dark .figma-font-ui14-medium,
+.figma-dark .figma-font-ui14-bold {
+	letter-spacing: var(--font-letter-spacing-neg-xlarge);
+}
