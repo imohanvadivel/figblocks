@@ -1,6 +1,6 @@
 {
 	"name": "figblocks",
-	"version": "0.0.1",
+	"version": "0.0.10",
 	"description": "A UI component library for building Figma plugins with svelte",
 	"author": {
 		"name": "Mohan Vadivel",
